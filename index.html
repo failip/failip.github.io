@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="theme-color" content="black">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Roboto+Condensed:500|Roboto:700">
+        <link rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous">
+        <link rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+            integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+            crossorigin="anonymous">
+        <link rel="stylesheet" href="css/picker.css">
+        <title>SSBU Stage Picker</title>
+    </head>
+    <body>
+        <div id="name-input">
+            <div id="names" class="card mx-auto mt-4 mb-4 text-center">
+                <div class="card-header">Who is playing?</div>
+                <div class="m-1 alert alert-danger">Provide two names</div>
+                <div class="m-2">
+                    <input class="form-control" type="text" id="player1name" placeholder="Player 1">
+                    <input class="form-control mt-2" type="text" id="player2name" placeholder="Player 2">
+                </div>
+                <div id="begin-match" class="m-1 btn btn-lg btn-primary">Begin Match</div>
+                <div id="begin-match-no-names" class="m-1 btn btn-sm btn-danger">Begin without names</div>
+            </div>
+            <div id="firstpick" class="card mx-auto mt-4 mb-4 text-center">
+                <div class="card-header">Who is firstpick?</div>
+                <div class="m-2">
+                    <button id="player1-firstpick" class="btn btn-primary">Player 1</button>
+                    <button id="player2-firstpick" class="btn btn-primary">Player 2</button>
+                </div>
+            </div>
+        </div>
+        <div id="overlay">
+            <i id="close-overlay" class="mr-2 mt-2 mb-2 float-right fas fa-lg
+                fa-times"></i>
+            <div class="m-1 mt-4 text-center">
+                <img class="rounded img-fluid mb-1"
+                    id="stage-to-play"
+                    src=""
+                    alt="">
+                <h1 id="stage-name">Stagename</h1>
+                <h1 class="mt-4">Winner of game?</h1>
+                <div class="d-flex justify-content-center">
+                    <button id="player1-won" class="btn btn-lg btn-primary
+                        mr-2">Player1</button>
+                    <button id="player2-won" class="btn btn-lg btn-primary
+                        ml-2">Player2</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex w-100 p-1" id="bar">
+            <div class="pl-1 mr-auto" id="player1">Player1</i></div>
+            <div id="score">0&nbsp;-&nbsp;0</div>
+            <div class="pr-1 ml-auto" id="player2">Player2</div>
+        </div>
+        <h1 id="info" class="text-center mt-1">Info</h1>
+        <h4 id="info-subtext" class="text-center">Info Subtext</h4>
+        <div class="d-flex flex-wrap justify-content-center" id="stages">
+        </div>
+        <h1 class="text-center mt-1"><i id="undo" class="fas fa-undo"></i></h1>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="js/picking.js"></script>
+    </body>
+</html>
