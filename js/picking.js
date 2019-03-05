@@ -103,11 +103,11 @@ class Match {
             $('#overlay').show();
         } else {
             if (bans == 0) {
-                $('#info').text(`Currently banning: ${this.players[this.firstpicker].name}`);
+                $('#info').text(`Banning: ${this.players[this.firstpicker].name}`);
             } else if (bans == 3) {
-                $('#info').text(`Currently picking: ${this.players[this.firstpicker].name}`);
+                $('#info').text(`Picking: ${this.players[this.firstpicker].name}`);
             } else {
-                $('#info').text(`Currently banning: ${this.players[(this.firstpicker + 1) % 2].name}`);
+                $('#info').text(`Banning: ${this.players[(this.firstpicker + 1) % 2].name}`);
             }
         }
     }
@@ -155,9 +155,9 @@ class Match {
             $('#stage-to-play').attr('src', $(stage).children().attr('src'));
             $('#overlay').show();
         } else if (bans == 2) {
-            $('#info').text(`Currently picking: ${this.players[(this.firstpicker + 1) % 2].name}`);
+            $('#info').text(`Picking: ${this.players[(this.firstpicker + 1) % 2].name}`);
         } else {
-            $('#info').text(`Currently banning: ${this.players[this.firstpicker].name}`);
+            $('#info').text(`Banning: ${this.players[this.firstpicker].name}`);
         }
     }
 
