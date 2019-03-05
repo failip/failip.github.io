@@ -103,11 +103,11 @@ class Match {
             $('#overlay').show();
         } else {
             if (bans == 0) {
-                $('#info').text(`Banning: ${this.players[this.firstpicker].name}`);
+                this.setupBanning(this.players[this.firstpicker].name);
             } else if (bans == 3) {
-                $('#info').text(`Picking: ${this.players[this.firstpicker].name}`);
+                this.setupPicking(this.players[this.firstpicker].name);
             } else {
-                $('#info').text(`Banning: ${this.players[(this.firstpicker + 1) % 2].name}`);
+                this.setupBanning(this.players[(this.firstpicker + 1) % 2].name);
             }
         }
     }
@@ -155,10 +155,22 @@ class Match {
             $('#stage-to-play').attr('src', $(stage).children().attr('src'));
             $('#overlay').show();
         } else if (bans == 2) {
-            $('#info').text(`Picking: ${this.players[(this.firstpicker + 1) % 2].name}`);
+            this.setupPicking(this.players[(this.firstpicker + 1) % 2].name);
         } else {
-            $('#info').text(`Banning: ${this.players[this.firstpicker].name}`);
+            this.setupBanning(this.players[this.firstpicker].name);
         }
+    }
+
+    setupPicking(playername) {
+        $('#info').text('Picking:\xa0');
+        $('#info').css('color', 'rgb(4, 120, 4)');
+        $('#playername').text(playername);
+    }
+
+    setupBanning(playername) {
+        $('#info').text('Banning:\xa0');
+        $('#info').css('color', 'rgb(169, 2, 2)');
+        $('#playername').text(playername);
     }
 
     winGame(winner) {
