@@ -229,8 +229,8 @@ $('#begin-match').click(function() {
 });
 
 $('#begin-match-no-names').click(function() {
-    player1 = new Player('Player 1');
-    player2 = new Player('Player 2');
+    player1 = new Player('Player\xa01');
+    player2 = new Player('Player\xa02');
     $('#names').hide();
     $('#firstpick').show();
 });

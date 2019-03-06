@@ -56,7 +56,7 @@ body {
 }
 
 #name-input {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(249, 249, 249, 0.95);
     position: absolute;
     top: 0;
     left: 0;
@@ -80,4 +80,27 @@ body {
 
 #playername {
     color: black;
+}
+.card-header {
+    color: white;
+    background-color: rgb(63, 63, 63);
+}
+.card {
+    background-color: rgb(77, 77, 77);
+}
+
+.btn-primary {
+    background-color: rgb(5, 151, 177);
+    border-color: rgb(4, 124, 145);
+}
+
+.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary:active {
+    background-color: rgb(76, 123, 131) !important;
+    border-color: rgb(2, 90, 106) !important;
+}
+
+.btn {
+    font-weight: 400;
 }
